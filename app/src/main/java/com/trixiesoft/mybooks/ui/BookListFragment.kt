@@ -131,7 +131,7 @@ class BookListFragment : Fragment() {
         AlertDialog.Builder(context!!)
             .setTitle("Mark As Read")
             .setIcon(if (book.read) R.drawable.ic_book_read else R.drawable.ic_book)
-            .setMessage("Marker the current book as having been read?")
+            .setMessage("Mark the current book as having been read?")
             .setPositiveButton("Yes", object: DialogInterface.OnClickListener {
                 override fun onClick(dialog: DialogInterface?, which: Int) {
                     markBook(book, true)

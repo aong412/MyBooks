@@ -27,6 +27,8 @@ abstract class AppDatabase : RoomDatabase() {
 
         @Query("SELECT * FROM book WHERE read ORDER BY title ASC")
         abstract fun getReadBooksFlowable(): Flowable<List<Book>>
+        //harder to verify against OpenLibrary when it will be sorted and different from the list shown on OL
+        //could be items in the list of OL that don't appear here or vice versa, harder to confirm
 
         @Query("SELECT * FROM book WHERE NOT(read) ORDER BY title ASC")
         abstract fun getUnreadBooksFlowable(): Flowable<List<Book>>
