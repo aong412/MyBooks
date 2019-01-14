@@ -112,6 +112,7 @@ class FindBookFragment : Fragment() {
             override fun onTouched() {
                 // close the keyboard
 //                searchEditText.hideSoftKeyboard()
+                //BUG HERE ao
                 // kill focus from edit
                 searchEditOverlay.requestFocus()
             }

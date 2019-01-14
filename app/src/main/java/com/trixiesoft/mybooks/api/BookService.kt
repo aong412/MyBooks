@@ -55,6 +55,7 @@ data class BookResult(
 )
 
 fun Book.getCoverUrlSmall(): String? {
+    //Not used??
     if (coverI != null) {
         //return String.format("http://covers.openlibrary.org/b/id/%s-S.jpg?default=false", coverI)
         return String.format("http://covers.openlibrary.org/b/id/%s-S.jpg?default=false", coverI)
@@ -63,6 +64,7 @@ fun Book.getCoverUrlSmall(): String? {
 }
 
 fun Book.getCoverUrlMedium(): String? {
+    //THIS NEEDS TESTING
     if (coverI != null) {
         return String.format("http://covers.openlibrary.org/b/id/%s-M.jpg?default=false", coverI)
     }
@@ -70,6 +72,7 @@ fun Book.getCoverUrlMedium(): String? {
 }
 
 fun Book.getCoverUrlLarge(): String? {
+    //Not used??
     if (coverI != null) {
         return String.format("http://covers.openlibrary.org/b/id/%s-L.jpg?default=false", coverI)
     }
@@ -96,6 +99,7 @@ data class Book(
     @SerializedName("title") val title: String,
     @SerializedName("title_suggest") val titleSuggest: String?,
     @SerializedName("type") val type: String
+    //why do we initialize all these variables when we don't use them all? ao
 
     // ISBN, OCLC, LCCN, OLID and ID (case-insensitive)
     //@SerializedName("author_alternative_name") val authorAlternativeName: List<String>,

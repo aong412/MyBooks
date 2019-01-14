@@ -31,7 +31,7 @@ public class AppDatabaseTest {
     @Test
     @Throws(Exception::class)
     fun addGetBook() {
-        db?.dao?.insertBooks(Book(0, "9789402306538", "The Hobbit", "J. R. R. Tolkien", false))
+        db?.dao?.insertBooks(Book("one","hello", "9789402306538", "The Hobbit", "J. R. R. Tolkien", false))
 
         val books = db?.dao?.getBooks()
         assertEquals(books?.size, 1)

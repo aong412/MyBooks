@@ -143,6 +143,7 @@ class MainActivity : AppCompatActivity(), FindBookFragment.FindBookInterface {
 
     class TabAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         override fun getItem(position: Int): Fragment? = when (position) {
+            //BUG HERE ao
             0 -> BookListFragment.newInstance(false)
             1 -> BookListFragment.newInstance(true)
             else -> null
